@@ -77,12 +77,12 @@ class Progress:
             elapsed_time = TimeFormatter(milliseconds=elapsed_time)
             estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
 
-            progress = "<b>╔═══════════════ ⌊__𝗨𝗽𝗹𝗼𝗮𝗱𝗶𝗻𝗴: {2}  📤__⌉</b>\n║ \n<b>╠═ {0}{1} </b>\n".format(
+            progress = "<b>╔═══════════════ ⌊ 𝗨𝗽𝗹𝗼𝗮𝗱𝗶𝗻𝗴 : [ {2} ] 📤 ⌉</b>\n║ \n<b>╠═ 〚 {0}{1} 〛 </b>\n".format(
                 ''.join([FINISHED_PROGRESS_STR for i in range(math.floor(percentage / 5))]),
                 ''.join([UN_FINISHED_PROGRESS_STR for i in range(20 - math.floor(percentage / 5))]),
                 round(percentage, 2))
             #cpu = "{psutil.cpu_percent()}%"
-            tmp = progress +"║" + "\n**╠═💾 𝗧𝗼𝘁𝗮𝗹 𝗦𝗶𝘇𝗲:**   <code>{1}</code> \n**╠═🕐 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲𝗱 ** :  <code>{0}</code> \n**╠═🧭 𝗦𝗽𝗲𝗲𝗱 ** : <code>{2}/s</code> \n**╠═⏰ 𝗘𝗧𝗔** :  <code>{3}</code> \n**║**\n**╚══ ⌊ 𝗗𝗘𝗩 𝗖𝗟𝗢𝗨𝗗 ⌉**".format(
+            tmp = progress +"║" + "\n**╠═ 💾 𝗧𝗼𝘁𝗮𝗹 𝗦𝗶𝘇𝗲:**   <code>{1}</code> \n**╠═ 🕐 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲𝗱 ** :  <code>{0}</code> \n**╠═ 🧭 𝗦𝗽𝗲𝗲𝗱 ** : <code>{2}/s</code> \n**╠═ ⏰ 𝗘𝗧𝗔** :  <code>{3}</code> \n**║**\n**╚══ ⌊ 𝗗𝗘𝗩 𝗖𝗟𝗢𝗨𝗗 ⌉**".format(
                 humanbytes(current),
                 humanbytes(total),
                 humanbytes(speed),
