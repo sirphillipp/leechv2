@@ -326,7 +326,7 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
                 if is_file is None:
                     msgg = f"<b>╠═ ⚙ 𝗖𝗼𝗻𝗻𝗲𝗰𝘁𝗶𝗼𝗻𝘀 : {file.connections} </b>"
                 else:
-                msg = f"\n<b>╔═══════════════ ⌊ 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗶𝗻𝗴 : [ {2} ] 📥 ⌉</b>\n║ \n<b>╠═ 〚 {0}{1} 〛 </b>\n".format(
+                msg = f"<b>╔═══════════════ ⌊ 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗶𝗻𝗴 : [ {2} ] 📥 ⌉</b>\n║ \n<b>╠═ 〚 {0}{1} 〛 </b>\n".format(
                 ''.join([FINISHED_PROGRESS_STR for i in range(math.floor(percentage / 5))]),
                 ''.join([UN_FINISHED_PROGRESS_STR for i in range(20 - math.floor(percentage / 5))]),
                 round(percentage, 2))
