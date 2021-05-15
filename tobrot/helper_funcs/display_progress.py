@@ -51,7 +51,7 @@ class Progress:
             [
                 [
                     InlineKeyboardButton(
-                        "Cancel 🚫",
+                        "𝗖𝗮𝗻𝗰𝗲𝗹 ❌",
                         callback_data=(
                             f"gUPcancel/{chat_id}/{mes_id}/{from_user}"
                         ).encode("UTF-8"),
