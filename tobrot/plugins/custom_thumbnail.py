@@ -55,4 +55,4 @@ async def clear_thumb_nail(client, message):
         os.remove(thumb_image_path)
         await ismgs.edit("<b>✅ Custom thumbnail cleared successfully.</b>")
     else:
-        await ismgs.edit("<b>❌ Nothing to clear.</b>")
+        await ismgs.edit("<b>Already Cleared ✅.</b>")
