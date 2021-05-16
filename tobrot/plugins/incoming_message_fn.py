@@ -68,7 +68,7 @@ async def incoming_message_f(client, message):
         LOGGER.info(dl_url)
         cf_name = None
     else:
-        await i_m_sefg.edit("<b>Hey Dude !</b>\n\n 🐈 <code>Reply with Direct /Torrent Link</code>")
+        await i_m_sefg.edit("<b>Invalid Format ❌</b>\n\n <b>Send A Torrent/Magnet/Direct Link & Reply With Command.</b>")
         return
     if dl_url is not None:
         await i_m_sefg.edit_text("<b>Extracting Link..🤐</b>")
@@ -149,7 +149,7 @@ async def incoming_youtube_dl_f(client, message):
         yt_dl_pass_word = None
         cf_name = None
     else:
-        await i_m_sefg.edit("🐈 𝐎𝐩𝐩𝐬 𝐑𝐞𝐩𝐥𝐲 𝐰𝐢𝐭𝐡 𝐘𝐨𝐮𝐓𝐮𝐛𝐞 𝐕𝐢𝐝𝐞𝐨𝐬 𝐋𝐢𝐧𝐤.")
+        await i_m_sefg.edit("𝐎𝐩𝐩𝐬 𝐑𝐞𝐩𝐥𝐲 𝐰𝐢𝐭𝐡 𝐘𝐨𝐮𝐓𝐮𝐛𝐞 𝐕𝐢𝐝𝐞𝐨𝐬 𝐋𝐢𝐧𝐤.")
         return
     if dl_url is not None:
         await i_m_sefg.edit_text("extracting links")
@@ -205,7 +205,7 @@ async def g_yt_playlist(client, message):
     if "youtube.com/playlist" in url:
         u_men = message.from_user.mention
         i_m_sefg = await message.reply_text(
-            f"<b>Ok Fine 🐈 {u_men} Bro!!:\n Your Request has been ADDED</b>\n\n <code> Please wait until Upload</code>",
+            f"<b>Ok Fine  {u_men} Bro!!:\n Your Request has been ADDED</b>\n\n <code> Please wait until Upload</code>",
             parse_mode="html",
         )
         await yt_playlist_downg(message, i_m_sefg, client, is_cloud)
@@ -271,10 +271,10 @@ async def rename_tg_file(client, message):
                 message_to_send += "\n"
             if message_to_send != "":
                 mention_req_user = (
-                    f"<a href='tg://user?id={usr_id}'>🐈 Hey Bru!! Your Requested Files 👇</a>\n\n"
+                    f"<a href='tg://user?id={usr_id}'>Source Code 😇</a>\n\n"
                 )
                 message_to_send = mention_req_user + message_to_send
-                message_to_send = message_to_send + "\n\n" + "<b> #UPLOADS\n\n💫 Powered By : @TGFilmZone</b>"
+                message_to_send = message_to_send + "\n\n" + "<b> #UPLOADS\n\n💫 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 : 𝗗𝗘𝗩 𝗖𝗟𝗢𝗨𝗗</b>"
             else:
                 message_to_send = "<i>FAILED</i> to upload files. 😞😞"
             await message.reply_text(
