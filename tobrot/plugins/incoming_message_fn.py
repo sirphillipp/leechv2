@@ -71,7 +71,7 @@ async def incoming_message_f(client, message):
         await i_m_sefg.edit("<b>Invalid Format ❌</b>\n\n <b>Send A Torrent/Magnet/Direct Link & Reply With Command.</b>")
         return
     if dl_url is not None:
-        await i_m_sefg.edit_text("<b>Extracting Link..🤐</b>")
+        await i_m_sefg.edit_text("<b>Extracting Link..🤯</b>")
         # start the aria2c daemon
         aria_i_p = await aria_start()
         # LOGGER.info(aria_i_p)
@@ -152,7 +152,7 @@ async def incoming_youtube_dl_f(client, message):
         await i_m_sefg.edit("𝐎𝐩𝐩𝐬 𝐑𝐞𝐩𝐥𝐲 𝐰𝐢𝐭𝐡 𝐘𝐨𝐮𝐓𝐮𝐛𝐞 𝐕𝐢𝐝𝐞𝐨𝐬 𝐋𝐢𝐧𝐤.")
         return
     if dl_url is not None:
-        await i_m_sefg.edit_text("extracting links")
+        await i_m_sefg.edit_text("𝑬𝒙𝒕𝒓𝒂𝒄𝒕𝒊𝒏𝒈 𝑳𝒊𝒏𝒌𝒔..")
         # create an unique directory
         user_working_dir = os.path.join(DOWNLOAD_LOCATION, str(current_user_id))
         # create download directory, if not exist
@@ -274,7 +274,7 @@ async def rename_tg_file(client, message):
                     f"<a href='tg://user?id={usr_id}'>Source Code 😇</a>\n\n"
                 )
                 message_to_send = mention_req_user + message_to_send
-                message_to_send = message_to_send + "\n\n" + "<b> #UPLOADS\n\n💫 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 : 𝗗𝗘𝗩 𝗖𝗟𝗢𝗨𝗗</b>"
+                message_to_send = message_to_send + "\n\n" + "<b> #UPLOADS\n\n💫Powered By : 𝗗𝗘𝗩 𝗖𝗟𝗢𝗨𝗗</b>"
             else:
                 message_to_send = "<i>FAILED</i> to upload files. 😞😞"
             await message.reply_text(
