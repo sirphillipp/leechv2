@@ -323,20 +323,20 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
                 except:
                     pass
                 #
-                if is_file is None:
-                    msgg = f"<b>➩ Connections : {file.connections} </b>"
+                 if is_file is None:
+                 msgg = f"<b>╠═ ⚙ 𝗖𝗼𝗻𝗻𝗲𝗰𝘁𝗶𝗼𝗻𝘀 : {file.connections}</b>"
                 else:
                     msgg = f"<b>➩ Info :- P: {file.connections} || S: {file.num_seeders} </b>\n\n<b>🗑️ GID :</b> <code>{gid}</code>"
-                msg = f"\n<b>📘 File Name :</b> `{downloading_dir_name}`\n\n<b>➩ Speed :</b> `{file.download_speed_string()}`"
-                msg += f"\n<b>➩ Size :</b> `{file.total_length_string()}`"
-                msg += f"\n<b>➩ Downloaded</b> : `{file.progress_string()}` \n<b>➩ ETA :</b> `{file.eta_string()}` \n {msgg}"
+                msg = f"\n<b> ╔═══════════════ ⌊  📥  𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗶𝗻𝗴.. ⌉ \n║"
+                msg += f"\n<b>╠═ 📀 𝗙𝗶𝗹𝗲 𝗡𝗮𝗺𝗲 :</b> `{downloading_dir_name}`\n║\n<b>╠═ 🧭 𝗦𝗽𝗲𝗲𝗱 :</b> `{file.download_speed_string()}`\n║"
+                msg += f"\n<b>╠═ 💾 𝗧𝗼𝘁𝗮𝗹 𝗦𝗶𝘇𝗲 :</b> `{file.total_length_string()}`\n<b>║"
+                msg += f"\n<b>╠═ ⏳ 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗱</b> : `{file.progress_string()}`\n║\n<b>╠═ ⏰ 𝗘𝗧𝗔 :</b> `{file.eta_string()}`\n║\n{msgg}\n║"
+                msg += f"\n<b>╚════ ⌊⚡️ 𝗗𝗘𝗩 𝗖𝗟𝗢𝗨𝗗 ⌉"
                 inline_keyboard = []
                 ikeyboard = []
-                ikeyboard.append(
-                    InlineKeyboardButton(
-                        " 🗑️ Cancel Process", callback_data=(f"cancel {gid}").encode("UTF-8")
+                ikeyboard.append(   InlineKeyboardButton(
+                        "❌ Cancel ❌", callback_data=(f"cancel {gid}").encode("UTF-8")
                     )
-                )
                 inline_keyboard.append(ikeyboard)
                 reply_markup = InlineKeyboardMarkup(inline_keyboard)
                 if msg != previous_message:
