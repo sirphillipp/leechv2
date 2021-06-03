@@ -10,12 +10,12 @@ async def new_join_f(client, message):
     chat_type = message.chat.type
     if chat_type != "private":
         await message.reply_text(
-            f"""<b>𝗛𝗲𝗹𝗹𝗼𝘄 👾 !\n\n 𝗧𝗵𝗶𝘀 𝗜𝘀 𝗔 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗟𝗲𝗲𝗰𝗵 𝗕𝗼𝘁 🧲</b>\n\n<b>𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 👨🏻‍💻 : 𝗗𝗘𝗩 𝗖𝗟𝗢𝗨𝗗""",
+            f"""<b>𝗛𝗲𝗹𝗹𝗼𝘄 👾 !\n\n 𝗧𝗵𝗶𝘀 𝗜𝘀 𝗔 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗟𝗲𝗲𝗰𝗵 𝗕𝗼𝘁 🧲</b>\n\n<b>𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 👨🏻‍💻 : Aaryan""",
             parse_mode="html",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('𝗖𝗵𝗮𝗻𝗻𝗲𝗹', url='https://t.me/DEV_BOTSS')
+                        InlineKeyboardButton('𝗖𝗵𝗮𝗻𝗻𝗲𝗹', url='https://t.me/jaugargg')
                     ]
                 ]
                )
